@@ -1,11 +1,13 @@
 package userServices.userApi.entity;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
@@ -32,4 +34,14 @@ public class Usuario {
     private String rol;
     @Temporal(TemporalType.TIMESTAMP)
     private LocalDateTime createAt;
+    //conexionc con sugerencias 1-muchos
+    @OneToMany(mappedBy = "usuario")
+    private List<Sugerencia> listSugerencias;
+    //conexion con mensajes 1-muchos
+    @OneToMany(mappedBy = "usuario")
+    private List<Mensaje> listMensajes;
+
+    //conexion muchos a muchos
+    @ManyToMany(nullable)
+
 }

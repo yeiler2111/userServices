@@ -27,6 +27,7 @@ public class Partida {
     private String deporte;
     private String ciudad;
     private String provincia;
+    @Temporal(TemporalType.TIMESTAMP)
     private LocalDateTime fecha;
     @Temporal(TemporalType.TIMESTAMP)
     private LocalDateTime horaComienzo;
