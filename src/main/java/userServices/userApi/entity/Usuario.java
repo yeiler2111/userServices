@@ -42,6 +42,7 @@ public class Usuario {
     private List<Mensaje> listMensajes;
 
     //conexion muchos a muchos
-    @ManyToMany(nullable)
+    private Partida partida;
+    
 
 }
