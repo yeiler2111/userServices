@@ -96,7 +96,9 @@ class UsuarioRepositoryTest extends AbstractIntegrationDBTest {
                 .password("123")
                 .build();
         usuarioRepository.save(usuario);
-        Usuario usuario2 = Usuario.builder().nombre("Jose")
+        @SuppressWarnings("unused")
+        Usuario usuario2 = Usuario.builder()
+                .nombre("Jose")
                 .apellido("Pertuz")
                 .username("josepertuz")
                 .password("123")
