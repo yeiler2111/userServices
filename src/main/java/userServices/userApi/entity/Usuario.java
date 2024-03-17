@@ -12,12 +12,20 @@ import jakarta.persistence.Table;
 import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Data
-@AllArgsConstructor
 @Entity
-@Table(name = "Usuarios")
+@Table(name = "usuarios")
+@AllArgsConstructor
+@NoArgsConstructor
+@Setter
+@Getter
+@Builder
 public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,7 +33,7 @@ public class Usuario {
     private String username;
     private String email;
     private String nombre;
-    private String apellidos;
+    private String apellido;
     private Integer edad;
     private String password;
     private String repPassword;
