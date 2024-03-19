@@ -1,4 +1,4 @@
-package edu.unimagdalena.microg2;
+package userServices.userApi;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

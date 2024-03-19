@@ -1,4 +1,4 @@
-package edu.unimagdalena.microg2.repository;
+package userServices.userApi.repositories;
 
 import static org.assertj.core.api.Assertions.*;
 
@@ -11,12 +11,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import userServices.userApi.AbstractIntegrationDBTest;
 import userServices.userApi.entity.Usuario;
-import userServices.userApi.repositories.UsuarioRepository;
 
-
-
-class UsuarioRepositoryTest extends AbstractIntegrationDBTest {
-    UsuarioRepository usuarioRepository;
+public class UsuarioRepositoryTest extends AbstractIntegrationDBTest{
+     UsuarioRepository usuarioRepository;
 
 
     @Autowired
@@ -109,5 +106,4 @@ class UsuarioRepositoryTest extends AbstractIntegrationDBTest {
         assertThat(usuarios).isNotEmpty();
         assertThat(usuarios).first().hasFieldOrPropertyWithValue("nombre","Julian");
     }
-
 }

@@ -1,4 +1,6 @@
-package edu.unimagdalena.microg2;
+package userServices.userApi;
+
+
 
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
